@@ -1,0 +1,17 @@
+;;; -*- lisp -*- ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Description
+;;; Author         Michael Kappert
+;;; Created        22/03/2000 11:15:16
+;;; Last Modified  <michael 2016-02-14 21:42:03>
+
+(dm:defmodule "regex"
+    :source-path "regex/"
+    :source-ext "cl"
+    :depends-on ("rdparse")
+    :components ((:serial
+                  (:file "regex-package")
+                  (:file "regex"))))
+
+;;; EOF
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
