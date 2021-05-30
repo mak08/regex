@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Description
 ;;; Author         Michael Kappert 2016
-;;; Last Modified <michael 2017-02-26 14:13:19>
+;;; Last Modified <michael 2021-05-16 22:22:20>
 
 ;;; (declaim (optimize (debug 3) (speed 0) (safety 0) (space 0)))
          
@@ -41,9 +41,7 @@
         (len (length string)))
     (declare (special state-ht eps-ht delta-ht))
     (flet ((accepting (state)
-             (or (gethash state accept-ht)
-                 (setf (gethash state accept-ht)
-                       (member (nfa-accepting nfa) state)))))
+             (member (nfa-accepting nfa) state)))
       (loop
          :with cur-state = (nfa-initial nfa)
          :with cur-accept = ()
